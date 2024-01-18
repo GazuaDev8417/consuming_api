@@ -11,17 +11,19 @@ import { Container } from "./styled"
 const User:FC = ()=>{
     const navigate = useNavigate()
     const logged = localStorage.getItem('logged')
-    let user = localStorage.getItem('user')
-    let userImage = localStorage.getItem('userImage')
+    const user = localStorage.getItem('user')
+    const userImage = localStorage.getItem('userImage')
     const age = localStorage.getItem('age')
     const gender = localStorage.getItem('gender')
     const email = localStorage.getItem('email')
-    let location = localStorage.getItem('location')
+    const location = localStorage.getItem('location')
+    const login = localStorage.getItem('login')
     const [modal, setModal] = useState<boolean>(false)
     const [city, setCity] = useState<string>('')
     const [state, setState] = useState<string>('')
     const [country, setCountry] = useState<string>('')
     const [timezone, setTimezone] = useState<string>('')
+    const [nickname, setNickname] = useState<string>('')
     const [photo, setPhoto] = useState<Picture>({
         large:'',
         medium:'',
@@ -33,7 +35,9 @@ const User:FC = ()=>{
         last:''
     })
 
-
+if(login){
+    console.log(JSON.parse(login))
+}
     useEffect(()=>{
         if(!logged){
             navigate('/')
@@ -41,18 +45,15 @@ const User:FC = ()=>{
     }, [])
 
     useEffect(()=>{
-        if(user && userImage && location){
+        if(user && userImage && location && login){
             setPhoto(JSON.parse(userImage))
             setUsername(JSON.parse(user))
             setCity(JSON.parse(location).city)
             setState(JSON.parse(location).state)
             setCountry(JSON.parse(location).country)
             setTimezone(JSON.parse(location).timezone.offset)
+            setNickname(JSON.parse(login).username)
         }
-
-        fetch('https://randomuser.me/api').then(res => res.json()).then(data=>{
-            console.log(data.results)
-        })
     }, [])
 
 
@@ -65,6 +66,16 @@ const User:FC = ()=>{
             setModal(false)
         }
     })
+
+
+    const delAccount = ()=>{
+        const decide = window.confirm('Esta ação irá apagar todos os dados do usuário atual. Deseja continuar?')
+
+        if(decide){
+            localStorage.clear()
+            navigate('/')
+        }
+    }
 
 
 
@@ -85,12 +96,16 @@ const User:FC = ()=>{
                 <div className="profile-container">
                     <div className="item"><b>Idade: </b>{age}</div>
                     <div className="item"><b>Gênero: </b>{gender === 'male' ? 'Masculino' : 'Feminino'}</div>
-                    <div className="item"><b>Email: </b>{email}</div>
                     <div className="item"><b>Cidade: </b>{city}</div>
                     <div className="item"><b>Estado: </b>{state}</div>
                     <div className="item"><b>País: </b>{country}</div>
                     <div className="item"><b>Fuso horário: </b>{timezone}</div>
-                    <button className="btn-delAccount">Deletar Conta</button>
+                    <div className="login-data">Usuário</div>
+                    <div className="item"><b>Email: </b>{email}</div>
+                    <div className="item"><b>Nome de usuário: </b>{nickname}</div>
+                    <button className="btn-delAccount" onClick={delAccount}>
+                        Deletar Conta
+                    </button>
                 </div>
             </main>
         </Container>

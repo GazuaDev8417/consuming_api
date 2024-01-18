@@ -18,6 +18,16 @@ export const Container = styled.div`
         font-size: 1.2rem;
     }
 
+    .image-container{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .image-container img{
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px;
+    }
+
     .name{
         text-align: center;
         margin-top: 10px;
@@ -55,13 +65,10 @@ export const Container = styled.div`
         transition: .5s;
     }
 
-    .image-container{
+    .profile-container .login-data{
         text-align: center;
         margin-top: 20px;
     }
 
-    .image-container img{
-        border-radius: 5px;
-        box-shadow: 2px 2px 4px;
-    }
+    
 `

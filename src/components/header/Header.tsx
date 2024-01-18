@@ -40,7 +40,7 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
     return(
         <HeaderContainer>
             <IoMdHome className="icon" onClick={()=> navigate('/')} />
-            <div/>
+            <h1>Consumindo APIs</h1>
             <div className="user-container">
                 {username.first}&nbsp;{username.last}
                 <img src={userImage ? photo.thumbnail : UserPic} alt="User image" onClick={userImage ? displayModal : undefined} />

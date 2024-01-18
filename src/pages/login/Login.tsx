@@ -61,7 +61,7 @@ const Login:FC = ()=>{
         setShowPassword(prevPass => !prevPass)
     }
 
-
+    
     const login = (e:FormEvent<HTMLFormElement>):void=>{
         e.preventDefault()        
         
@@ -77,10 +77,19 @@ const Login:FC = ()=>{
                 
                 localStorage.setItem('logged', 'logged')                
                 navigate('/home')
+            }else if(loginStored){
+                if(
+                    form.email === email &&
+                    form.password === JSON.parse(loginStored).password
+                ){
+                    localStorage.setItem('logged', 'logged')                
+                    navigate('/home')
+                }else{
+                    alert('Usuário não encontrado!')
+                }
+
             }
             
-            localStorage.setItem('logged', 'logged')                
-            navigate('/home')
         }).catch(e=>{
             alert(e.message)
         })
