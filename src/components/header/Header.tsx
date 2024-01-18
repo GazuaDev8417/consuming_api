@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { IoMdHome } from "react-icons/io"
-import { Picture, Username } from "../../interfaces/interfaces"
+import { Username, Picture } from "../../interfaces/interfaces"
 import { HeaderContainer } from "./styled"
 // @ts-ignore
 import UserPic from '../../assets/user.jpg'
@@ -14,8 +14,8 @@ interface HeaderProps{
 
 const Header:FC<HeaderProps> = ({ displayModal })=>{
     const navigate = useNavigate()
-    const user = localStorage.getItem('user')
-    const userImage = localStorage.getItem('userImage')
+    let user = localStorage.getItem('user')
+    let userImage = localStorage.getItem('userImage')
     const [photo, setPhoto] = useState<Picture>({
         large:'',
         medium:'',
@@ -28,14 +28,18 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
     })
     
     
-    
+
     const login = ():void=>{
         fetch('https://randomuser.me/api').then(res => res.json()).then(data=>{
-            if(!user && !userImage){
+            if(!user){
                 localStorage.setItem('user', JSON.stringify(data.results[0].name))
                 localStorage.setItem('userImage', JSON.stringify(data.results[0].picture))
+                localStorage.setItem('age', data.results[0].dob.age)
+                localStorage.setItem('email', data.results[0].email)
+                localStorage.setItem('gender', data.results[0].gender)
+                localStorage.setItem('location', JSON.stringify(data.results[0].location))                
             }
-            
+
             if(user && userImage){
                 setUsername(JSON.parse(user))
                 setPhoto(JSON.parse(userImage))
@@ -53,6 +57,7 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
             setPhoto(JSON.parse(userImage))
         }
     }, [])
+    
 
     
     return(
@@ -64,9 +69,7 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
                     <div className="login" onClick={login}>Logar</div>
                 ) }&nbsp;
                 {username.last}
-                {/* {photo ? ( */}
-                    <img src={userImage ? photo.thumbnail : UserPic} alt="User image" onClick={userImage ? displayModal : undefined} />
-                {/* ) : <img src={UserPic} alt="User image"/> } */}
+                <img src={userImage ? photo.thumbnail : UserPic} alt="User image" onClick={userImage ? displayModal : undefined} />
             </div>
         </HeaderContainer>
     )

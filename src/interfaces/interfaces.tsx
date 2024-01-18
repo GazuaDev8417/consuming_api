@@ -1,7 +1,7 @@
 export interface Username {
     title:string
     first:string
-    last:string
+    last:string 
 }
 
 export interface Picture {

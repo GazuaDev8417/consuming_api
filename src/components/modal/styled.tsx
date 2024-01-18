@@ -25,7 +25,7 @@ export const Container = styled.div`
     }
 
     .item:hover{
-        background-color: gray;
+        background-color: lightgray;
         border-radius: 10px;
         cursor: pointer;
     }

@@ -1,10 +1,11 @@
 import { FC } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 import { Container } from "./styled"
 
 
 const Modal:FC = ()=>{
     const navigate = useNavigate()
+    const local = useLocation()
     const user = localStorage.getItem('user')
     const username = user ? JSON.parse(user) : null
 
@@ -14,7 +15,14 @@ const Modal:FC = ()=>{
 
         if(decide){
             localStorage.clear()
-            location.reload()
+
+            if(local.pathname === '/'){
+                location.reload()
+            }
+
+            if(local.pathname === '/user'){
+                navigate('/')
+            }
         }
     }
 
