@@ -26,31 +26,8 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
         first:'',
         last:''
     })
+
     
-    
-
-    const login = ():void=>{
-        fetch('https://randomuser.me/api').then(res => res.json()).then(data=>{
-            if(!user){
-                localStorage.setItem('user', JSON.stringify(data.results[0].name))
-                localStorage.setItem('userImage', JSON.stringify(data.results[0].picture))
-                localStorage.setItem('age', data.results[0].dob.age)
-                localStorage.setItem('email', data.results[0].email)
-                localStorage.setItem('gender', data.results[0].gender)
-                localStorage.setItem('location', JSON.stringify(data.results[0].location))                
-            }
-
-            if(user && userImage){
-                setUsername(JSON.parse(user))
-                setPhoto(JSON.parse(userImage))
-            }
-            
-            location.reload()
-        }).catch(e=>{
-            alert(e.message)
-        })
-    }
-
     useEffect(()=>{
         if(user && userImage){
             setUsername(JSON.parse(user))
@@ -65,10 +42,7 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
             <IoMdHome className="icon" onClick={()=> navigate('/')} />
             <div/>
             <div className="user-container">
-                {username.first ? username.first : (
-                    <div className="login" onClick={login}>Logar</div>
-                ) }&nbsp;
-                {username.last}
+                {username.first}&nbsp;{username.last}
                 <img src={userImage ? photo.thumbnail : UserPic} alt="User image" onClick={userImage ? displayModal : undefined} />
             </div>
         </HeaderContainer>

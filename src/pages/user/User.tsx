@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Header from "../../components/header/Header"
 import Modal from "../../components/modal/Modal"
 import { Picture, Username } from "../../interfaces/interfaces"
@@ -8,6 +9,8 @@ import { Container } from "./styled"
 
 
 const User:FC = ()=>{
+    const navigate = useNavigate()
+    const logged = localStorage.getItem('logged')
     let user = localStorage.getItem('user')
     let userImage = localStorage.getItem('userImage')
     const age = localStorage.getItem('age')
@@ -30,6 +33,12 @@ const User:FC = ()=>{
         last:''
     })
 
+
+    useEffect(()=>{
+        if(!logged){
+            navigate('/')
+        }
+    }, [])
 
     useEffect(()=>{
         if(user && userImage && location){
@@ -69,6 +78,9 @@ const User:FC = ()=>{
                     ) : null}
                     {modal ? <Modal/> : null}
                 </div>
+                <div className="image-container">
+                    <img src={photo ? photo.large : undefined} alt="User image" />
+                </div>
                 <div className="name">{username.first} {username.last}</div>
                 <div className="profile-container">
                     <div className="item"><b>Idade: </b>{age}</div>
@@ -78,6 +90,7 @@ const User:FC = ()=>{
                     <div className="item"><b>Estado: </b>{state}</div>
                     <div className="item"><b>País: </b>{country}</div>
                     <div className="item"><b>Fuso horário: </b>{timezone}</div>
+                    <button className="btn-delAccount">Deletar Conta</button>
                 </div>
             </main>
         </Container>

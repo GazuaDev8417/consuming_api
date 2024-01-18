@@ -1,11 +1,10 @@
 import { FC } from "react"
-import { useNavigate, useLocation } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Container } from "./styled"
 
 
 const Modal:FC = ()=>{
     const navigate = useNavigate()
-    const local = useLocation()
     const user = localStorage.getItem('user')
     const username = user ? JSON.parse(user) : null
 
@@ -14,15 +13,8 @@ const Modal:FC = ()=>{
         const decide = window.confirm('Tem certeza que deseja deslogar?')
 
         if(decide){
-            localStorage.clear()
-
-            if(local.pathname === '/'){
-                location.reload()
-            }
-
-            if(local.pathname === '/user'){
-                navigate('/')
-            }
+            localStorage.removeItem('logged')
+            navigate('/')
         }
     }
 
