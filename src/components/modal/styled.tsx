@@ -11,7 +11,7 @@ export const Container = styled.div`
 
     .user{
         text-align: center;
-        margin: 10px 0 30px 0;
+        margin: 30px 0 20px 0;
         font-weight: bold;
         font-size: 1.2rem;
     }
@@ -28,5 +28,6 @@ export const Container = styled.div`
         background-color: lightgray;
         border-radius: 10px;
         cursor: pointer;
+        box-shadow: 0 0 5px;
     }
 `

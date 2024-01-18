@@ -5,12 +5,22 @@ export const Container = styled.div`
     /* position: relative; */
     .modal-container{
         position: absolute;
+        top: 13%;
         right: 1%;
+    }
+
+    .close{
+        right: 2%;
+        margin: 20px;
+        position: absolute;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 
     .name{
         text-align: center;
-        margin-top: 20px;
+        margin-top: 50px;
         font-size: 2rem;
     }
 

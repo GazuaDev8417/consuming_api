@@ -1,7 +1,8 @@
-import { FC, useEffect, useState, useRef } from "react"
+import { FC, useEffect, useState } from "react"
 import Header from "../../components/header/Header"
 import Modal from "../../components/modal/Modal"
 import { Picture, Username } from "../../interfaces/interfaces"
+import { IoIosCloseCircle } from "react-icons/io"
 import { Container } from "./styled"
 
 
@@ -13,7 +14,6 @@ const User:FC = ()=>{
     const gender = localStorage.getItem('gender')
     const email = localStorage.getItem('email')
     let location = localStorage.getItem('location')
-    const modalRef = useRef(null)
     const [modal, setModal] = useState<boolean>(false)
     const [city, setCity] = useState<string>('')
     const [state, setState] = useState<string>('')
@@ -39,21 +39,34 @@ const User:FC = ()=>{
             setState(JSON.parse(location).state)
             setCountry(JSON.parse(location).country)
             setTimezone(JSON.parse(location).timezone.offset)
-
-            console.log(JSON.parse(location))
         }
+
+        fetch('https://randomuser.me/api').then(res => res.json()).then(data=>{
+            console.log(data.results)
+        })
     }, [])
-    
-    
+
+
     const displayModal = ()=>{
         setModal(prevModal => !prevModal)
-    } 
+    }     
+    
+    document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape'){
+            setModal(false)
+        }
+    })
+
+
 
     return(
         <Container>
             <Header displayModal={displayModal} />
             <main>
-                <div className="modal-container" ref={modalRef}>
+                <div className="modal-container">
+                    {modal ? (
+                        <IoIosCloseCircle className="close" onClick={()=> setModal(false)} />
+                    ) : null}
                     {modal ? <Modal/> : null}
                 </div>
                 <div className="name">{username.first} {username.last}</div>

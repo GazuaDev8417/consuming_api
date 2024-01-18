@@ -26,6 +26,7 @@ const Modal:FC = ()=>{
         }
     }
 
+    
 
     return(
         <Container>
