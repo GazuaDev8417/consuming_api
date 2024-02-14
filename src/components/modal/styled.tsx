@@ -5,7 +5,7 @@ export const Container = styled.div`
     background: rgba(0,0,0,.9);
     color: whitesmoke;
     width: 15vw;
-    height: 30vh;
+    height: 35vh;
     box-shadow: 2px 2px 4px;
     margin: 10px;
     border: 1px solid;

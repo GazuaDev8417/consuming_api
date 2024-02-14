@@ -21,6 +21,7 @@ export const HeaderContainer = styled.header`
         display: flex;
         align-items: center;
         gap: 10px;
+        font-weight: 400;
     }
 
     .login{

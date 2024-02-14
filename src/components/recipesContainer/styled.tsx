@@ -1,19 +1,16 @@
 import styled from "styled-components"
 
 
+
 export const Container = styled.div`
     padding: 10px;
-    width: 40vw;
-    border: 2px solid;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
-
-    h2{
+    
+    h1{
         text-align: center;
-        margin-bottom: 20px;
+        margin: 20px;
     }
 
     .product-container{
@@ -23,10 +20,11 @@ export const Container = styled.div`
         gap: 30px;
         flex-wrap: wrap;
     }
-    
+
     img{
-        width: 300px;
-    }
+        width: 100%;
+        object-fit: cover;
+    } 
 
     figure{
         border: 1px solid;
@@ -36,5 +34,14 @@ export const Container = styled.div`
 
     figcaption{
         padding: 5px;
+        text-align: center;
+    }
+
+    figcaption .title{
+        font-size: 1.5rem;
+    }
+
+    figcaption .caption-content{
+        text-align: left;
     }
 `

@@ -24,6 +24,7 @@ const Modal:FC = ()=>{
         <Container>
             <div className="user">{username.first} {username.last}</div>
             <div className="item" onClick={()=> navigate('/')}>Home</div>  
+            <div className="item" onClick={()=> navigate('/recipes')}>Receitas</div>  
             <div className="item" onClick={()=> navigate('/user')}>Perfil</div>  
             <div className="item" onClick={logout}>Logout</div>  
         </Container>
