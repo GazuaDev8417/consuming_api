@@ -75,6 +75,7 @@ export const Container = styled.div`
     footer{
         font-family: 'Cormorant Garamond', serif;
         font-size: 13pt;
+        font-style: italic;
         display: flex;
         align-items: center;
         justify-content: center;
