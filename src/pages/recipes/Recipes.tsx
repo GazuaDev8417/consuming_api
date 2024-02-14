@@ -40,6 +40,12 @@ const Recipes:FC = ()=>{
                 </div>
                 <RecipesContainer/>
             </main>
+            <footer>
+                Copyright &copy; 2023 por &nbsp;
+                <a href="https://portfolio-x22d.onrender.com/" target="_blank">
+                    Flamarion França
+                </a>
+            </footer>
         </Container>
     )
 }

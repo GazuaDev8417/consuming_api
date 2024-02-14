@@ -23,4 +23,13 @@ export const Container = styled.div`
         display: flex;
         justify-content: space-between;
     }
+
+    footer{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 13pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
 `

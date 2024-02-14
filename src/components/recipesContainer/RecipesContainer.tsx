@@ -43,7 +43,7 @@ const RecipesContainer:FC = ()=>{
                         </div>
                     )
                 })}
-            </div>
+            </div>            
         </Container>
     )
 }

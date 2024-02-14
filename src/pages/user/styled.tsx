@@ -71,5 +71,12 @@ export const Container = styled.div`
         margin-top: 20px;
     }
 
-    
+    footer{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 13pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
 `
