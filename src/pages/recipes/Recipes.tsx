@@ -38,7 +38,9 @@ const Recipes:FC = ()=>{
                     ) : null}
                     {modal ? <Modal/> : null}
                 </div>
-                <RecipesContainer/>
+                <div className="recipes-container">
+                    <RecipesContainer/>
+                </div>
             </main>
             <footer>
                 Copyright &copy; 2023 por &nbsp;

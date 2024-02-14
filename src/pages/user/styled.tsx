@@ -59,6 +59,7 @@ export const Container = styled.div`
     .profile-container .btn-delAccount:hover{
         background-color: rgba(255,0,0,.9);
         box-shadow: 0 0 8px;
+        color: whitesmoke;
     }
 
     .profile-container .btn-delAccount:active{

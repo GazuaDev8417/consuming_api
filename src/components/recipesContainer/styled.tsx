@@ -7,10 +7,11 @@ export const Container = styled.div`
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+    width: 70vw;
     
     h1{
         text-align: center;
-        margin: 20px;
+        margin: 40px;
     }
 
     .product-container{

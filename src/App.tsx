@@ -9,6 +9,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }  
+
+  body{
+    background-color: #08001a;
+    color: whitesmoke;
+  }
 `
 
 function App() {

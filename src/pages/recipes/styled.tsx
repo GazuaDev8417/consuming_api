@@ -3,6 +3,12 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
+    .recipes-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .modal-container{
         position: absolute;
         top: 13%;
