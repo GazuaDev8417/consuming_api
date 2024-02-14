@@ -30,7 +30,7 @@ const Main:FC = ()=>{
                                     <b>Modelo: </b>{product.title}<br/>
                                     <b>Marca: </b>{product.brand}<br/>
                                     <b>Categoria: </b>{product.category}<br/>
-                                    <b>Valor: </b>$ {product.price}
+                                    <b>Valor: </b>$ {product.price.toFixed(2)}
                                 </figcaption>
                             </figure>
                         </div>

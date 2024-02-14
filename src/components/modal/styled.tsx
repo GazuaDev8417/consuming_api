@@ -10,6 +10,9 @@ export const Container = styled.div`
     margin: 10px;
     border: 1px solid;
     border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 
     .user{
         text-align: center;

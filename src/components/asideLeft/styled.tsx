@@ -7,6 +7,9 @@ export const Container = styled.div`
     border: 2px solid;
     border-radius: 10px;
     box-shadow: 2px 2px 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 
     h2{
         text-align: center;
@@ -22,6 +25,21 @@ export const Container = styled.div`
     }
     
     img{
-        width: 300px;
-    }    
+        width: 150px;
+    }   
+    
+    figure{
+        border: 2px solid;
+        box-shadow: 2px 2px 4px;
+        border-radius: 5px;
+    }
+
+    figcaption{
+        padding: 5px;
+        text-align: center;
+    }
+
+    figcaption .caption-content{
+        text-align: left;
+    }
 `

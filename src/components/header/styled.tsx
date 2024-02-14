@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 
-
 export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
@@ -9,6 +8,9 @@ export const HeaderContainer = styled.header`
     padding: 10px 15px;
     height: 13vh;
     box-shadow: 2px 2px 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 
     .icon{
         font-size: 2rem;

@@ -45,11 +45,72 @@ export interface Carts {
     userId:number
 }
 
-export interface Posts {
-    body:string
-    id:number
-    reactions:number
-    tags:string[]
+interface Coordinates {
+    lat:number
+    lng:number
+}
+
+interface Address {
+    address:string
+    city:string
+    coordinates:Coordinates
+    postalCode:string
+    state:string
+}
+
+interface Bank {
+    cardExpire:string
+    cardNumber:string
+    cardType:string
+    currency:string
+    iban:string
+}
+
+interface Company {
+    address:Address
+    department:string
+    name:string
     title:string
-    userId:number
+}
+
+interface Crypto {
+    coin:string
+    network:string
+    wallet:string
+}
+
+interface Hair {
+    color:string
+    type:string
+}
+
+export interface Users {
+    address:Address
+    age:number
+    bank:Bank
+    birthDate:string
+    bloodGroup:string
+    company:Company
+    crypt:Crypto
+    domain:string
+    ein:string
+    email:string
+    eyeColor:string
+    firstName:string
+    gender:string
+    hair:Hair
+    height:number
+    id:number
+    image:string
+    ip:string
+    lastName:string
+    macAddress:string
+    maidenName:string
+    password:string
+    phone:string
+    ssn:string
+    university:string
+    userAgent:string
+    username:string
+    weight:number
 }
