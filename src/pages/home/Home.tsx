@@ -1,6 +1,9 @@
 import { FC, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Header from "../../components/header/Header"
+import AsideLeft from "../../components/asideLeft/AsideLeft"
+import AsideRight from "../../components/asideRight/AsideRight"
+import Main from "../../components/main/Main"
 import Modal from "../../components/modal/Modal"
 import { IoIosCloseCircle } from "react-icons/io"
 import { Container } from "./styled"
@@ -42,6 +45,11 @@ const Home:FC = ()=>{
                         <IoIosCloseCircle className="close" onClick={()=> setModal(false)} />
                     ) : null}
                     {modal ? <Modal/> : null}
+                </div>
+                <div className="content">
+                    <AsideLeft/>
+                    <Main/>
+                    <AsideRight/>
                 </div>
             </main>
         </Container>

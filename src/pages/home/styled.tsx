@@ -9,11 +9,18 @@ export const Container = styled.div`
     }
 
     .close{
+        color: whitesmoke;
         right: 2%;
         margin: 20px;
         position: absolute;
         cursor: pointer;
         font-weight: bold;
         font-size: 1.2rem;
+    }
+
+    .content{
+        margin: 10vh 10px 0 10px;
+        display: flex;
+        justify-content: space-between;
     }
 `

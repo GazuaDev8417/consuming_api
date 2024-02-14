@@ -39,7 +39,8 @@ const Header:FC<HeaderProps> = ({ displayModal })=>{
     
     return(
         <HeaderContainer>
-            <IoMdHome className="icon" onClick={()=> navigate('/')} />
+            {/* <IoMdHome className="icon" onClick={()=> navigate('/')} /> */}
+            <div/>
             <h1>Consumindo APIs</h1>
             <div className="user-container">
                 {username.first}&nbsp;{username.last}

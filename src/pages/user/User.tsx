@@ -35,9 +35,10 @@ const User:FC = ()=>{
         last:''
     })
 
-if(login){
-    console.log(JSON.parse(login))
-}
+    if(login){
+        console.log(JSON.parse(login))
+    }
+    
     useEffect(()=>{
         if(!logged){
             navigate('/')

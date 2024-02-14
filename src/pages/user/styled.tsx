@@ -10,6 +10,7 @@ export const Container = styled.div`
     }
 
     .close{
+        color: whitesmoke;
         right: 2%;
         margin: 20px;
         position: absolute;

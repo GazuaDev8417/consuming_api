@@ -2,6 +2,8 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
+    background: rgba(0,0,0,.9);
+    color: whitesmoke;
     width: 15vw;
     height: 30vh;
     box-shadow: 2px 2px 4px;
@@ -19,13 +21,13 @@ export const Container = styled.div`
     .item{
         padding: 10px 0;
         margin: 0 5px;
-        /* border-bottom: 1px solid; */
         text-align: center;
         transition: .5s;
     }
 
     .item:hover{
         background-color: lightgray;
+        color: black;
         border-radius: 10px;
         cursor: pointer;
         box-shadow: 0 0 5px;
