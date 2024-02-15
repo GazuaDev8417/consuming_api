@@ -167,11 +167,13 @@ Error generating stack: `+o.message+`
         width: 50px;
     }
 `,z0="/consuming_api/assets/user-xO4uykWL.jpg",ws=({displayModal:e})=>{let t=localStorage.getItem("user"),n=localStorage.getItem("userImage");const[r,l]=_.useState({large:"",medium:"",thumbnail:""}),[o,i]=_.useState({title:"",first:"",last:""});return _.useEffect(()=>{t&&n&&(i(JSON.parse(t)),l(JSON.parse(n)))},[]),g.jsxs(I0,{children:[g.jsx("div",{}),g.jsx("h1",{children:"Consumindo APIs"}),g.jsxs("div",{className:"user-container",children:[o.first," ",o.last,g.jsx("img",{src:n?r.thumbnail:z0,alt:"User image",onClick:n?e:void 0})]})]})},O0=Ye.div`
+    background-color: #000035;
+    color: black;
     padding: 10px;
     width: 20vw;
     border: 2px solid;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px;
+    box-shadow: 2px 2px 4px gray;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -179,6 +181,7 @@ Error generating stack: `+o.message+`
     h2{
         text-align: center;
         margin-bottom: 20px;
+        color: whitesmoke;
     }
 
     .product-container{
@@ -194,8 +197,9 @@ Error generating stack: `+o.message+`
     }   
     
     figure{
+        background-color: whitesmoke;
         border: 1px solid;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         border-radius: 5px;
     }
 
@@ -208,11 +212,13 @@ Error generating stack: `+o.message+`
         text-align: left;
     }
 `,T0=()=>{const[e,t]=_.useState([]);return _.useEffect(()=>{fetch("https://dummyjson.com/users").then(n=>n.json()).then(n=>{t(n.users)}).catch(n=>{alert(n.message)})},[]),g.jsxs(O0,{children:[g.jsx("h2",{children:"Usuários"}),g.jsx("div",{className:"product-container",children:e.map(n=>g.jsx("div",{children:g.jsxs("figure",{children:[g.jsx("img",{src:n.image,alt:"User Image"}),g.jsxs("figcaption",{children:[g.jsxs("b",{children:[n.firstName," ",n.lastName]}),g.jsx("br",{}),g.jsx("br",{}),g.jsxs("div",{className:"caption-content",children:[g.jsx("b",{children:"Endereço: "}),n.address.address,g.jsx("br",{}),g.jsx("b",{children:"Cidade: "}),n.address.city,g.jsx("br",{}),g.jsx("b",{children:"Estado: "}),n.address.state,g.jsx("br",{}),g.jsx("b",{children:"Idade: "}),n.age,g.jsx("br",{}),g.jsx("b",{children:"Gênero: "}),n.gender==="male"?"Masculino":"Feminino",g.jsx("br",{}),g.jsx("b",{children:"Email: "}),n.email,g.jsx("br",{}),g.jsx("b",{children:"Nickname: "}),n.username]})]})]})},n.id))})]})},L0=Ye.div`
+    background-color: #000035;
+    color: black;
     padding: 10px;
     width: 20vw;
     border: 2px solid;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px;
+    box-shadow: 2px 2px 4px gray;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -220,6 +226,7 @@ Error generating stack: `+o.message+`
     h2{
         text-align: center;
         margin-bottom: 20px;
+        color: whitesmoke;
     }
 
     .product-container{
@@ -235,8 +242,9 @@ Error generating stack: `+o.message+`
     }
 
     figure{
+        background-color: whitesmoke;
         border: 1px solid;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         border-radius: 5px;
     }
 
@@ -244,11 +252,13 @@ Error generating stack: `+o.message+`
         padding: 5px;
     }
 `,$0=()=>{const[e,t]=_.useState([]);return _.useEffect(()=>{fetch("https://dummyjson.com/carts").then(n=>n.json()).then(n=>{t(n.carts)})},[]),g.jsxs(L0,{children:[g.jsx("h2",{children:"Carts"}),g.jsx("div",{className:"product-container",children:e.map(n=>n.products.map(r=>g.jsxs("figure",{children:[g.jsx("img",{src:r.thumbnail,alt:"Cart Picture"}),g.jsxs("figcaption",{children:[g.jsx("b",{children:"Produto: "}),r.title,g.jsx("br",{}),g.jsx("b",{children:"Valor: "}),"$ ",r.price.toFixed(2)]})]})))})]})},M0=Ye.div`
+    background-color: #000035;
+    color: black;
     padding: 10px;
     width: 40vw;
     border: 2px solid;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px;
+    box-shadow: 2px 2px 4px gray;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -256,6 +266,7 @@ Error generating stack: `+o.message+`
     h2{
         text-align: center;
         margin-bottom: 20px;
+        color: whitesmoke;
     }
 
     .product-container{
@@ -272,8 +283,9 @@ Error generating stack: `+o.message+`
 
     figure{
         border: 1px solid;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         border-radius: 5px;
+        background-color: whitesmoke;
     }
 
     figcaption{
@@ -372,13 +384,15 @@ Error generating stack: `+o.message+`
 
     figure{
         border: 1px solid;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         border-radius: 5px;
+        background-color: whitesmoke;
     }
 
     figcaption{
         padding: 5px;
         text-align: center;
+        color: black;
     }
 
     figcaption .title{
@@ -455,9 +469,11 @@ Error generating stack: `+o.message+`
     }
 
     .profile-container{
+        background-color: whitesmoke;
+        color: black;
         display: flex;
         flex-direction: column;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         padding: 20px;
         border-radius: 10px;
         margin: 5vh 30vw;
@@ -466,6 +482,7 @@ Error generating stack: `+o.message+`
     }
 
     .profile-container .btn-delAccount{
+        background-color: red;
         margin-top: 10px;
         padding: 5px;
         border: 1px solid;
@@ -477,7 +494,7 @@ Error generating stack: `+o.message+`
 
     .profile-container .btn-delAccount:hover{
         background-color: rgba(255,0,0,.9);
-        box-shadow: 0 0 8px;
+        box-shadow: 0 0 8px black;
         color: whitesmoke;
     }
 
@@ -508,7 +525,7 @@ Error generating stack: `+o.message+`
   }  
 
   body{
-    background-color: #05000f;
+    background-color: #09001a;
     color: whitesmoke;
   }
 `;function J0(){return g.jsxs(vg,{children:[g.jsx(Y0,{}),g.jsx(K0,{})]})}fi.createRoot(document.getElementById("root")).render(g.jsx(oe.StrictMode,{children:g.jsx(J0,{})}));
