@@ -72,6 +72,8 @@ Error generating stack: `+o.message+`
     height: 100vh;
 
     .form-style fieldset{
+        background-color: #010133;
+        color: black;
         width: 30vw;
         display: flex;
         flex-direction: column;
@@ -79,12 +81,13 @@ Error generating stack: `+o.message+`
         gap: 15px;
         padding: 30px 10px;
         border-radius: 10px;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
     }
 
     .form-style fieldset legend{
         text-align: center;
         font-size: 1.5rem;
+        color: whitesmoke;
     }
 
     .form-style .input-container{
@@ -105,7 +108,7 @@ Error generating stack: `+o.message+`
         border: 1px solid;
         outline: none;
         padding-left: 10px;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
     }
 
     .form-style .btn-container{
@@ -121,13 +124,15 @@ Error generating stack: `+o.message+`
         border-radius: 10px;
         border: 1px solid;
         width: 100px;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
+        color: whitesmoke;
         cursor: pointer;
         transition: .3s;
+        background-color: rgba(8, 138, 181, 0.5);
     }
 
     .btn-container button:hover{
-        background-color: rgba(8, 138, 181, 0.5);
+        background-color: green;
         box-shadow: 0 0 8px;
     }
 
