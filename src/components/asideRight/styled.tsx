@@ -2,11 +2,13 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
+    background-color: #000035;
+    color: black;
     padding: 10px;
     width: 20vw;
     border: 2px solid;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px;
+    box-shadow: 2px 2px 4px gray;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -14,6 +16,7 @@ export const Container = styled.div`
     h2{
         text-align: center;
         margin-bottom: 20px;
+        color: whitesmoke;
     }
 
     .product-container{
@@ -29,8 +32,9 @@ export const Container = styled.div`
     }
 
     figure{
+        background-color: whitesmoke;
         border: 1px solid;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         border-radius: 5px;
     }
 

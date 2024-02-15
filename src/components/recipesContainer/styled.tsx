@@ -29,13 +29,15 @@ export const Container = styled.div`
 
     figure{
         border: 1px solid;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         border-radius: 5px;
+        background-color: whitesmoke;
     }
 
     figcaption{
         padding: 5px;
         text-align: center;
+        color: black;
     }
 
     figcaption .title{

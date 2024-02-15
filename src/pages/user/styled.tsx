@@ -36,9 +36,11 @@ export const Container = styled.div`
     }
 
     .profile-container{
+        background-color: whitesmoke;
+        color: black;
         display: flex;
         flex-direction: column;
-        box-shadow: 2px 2px 4px;
+        box-shadow: 2px 2px 4px gray;
         padding: 20px;
         border-radius: 10px;
         margin: 5vh 30vw;
@@ -47,6 +49,7 @@ export const Container = styled.div`
     }
 
     .profile-container .btn-delAccount{
+        background-color: red;
         margin-top: 10px;
         padding: 5px;
         border: 1px solid;
@@ -58,7 +61,7 @@ export const Container = styled.div`
 
     .profile-container .btn-delAccount:hover{
         background-color: rgba(255,0,0,.9);
-        box-shadow: 0 0 8px;
+        box-shadow: 0 0 8px black;
         color: whitesmoke;
     }
 
