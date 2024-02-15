@@ -1,6 +1,4 @@
 import { FC, useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { IoMdHome } from "react-icons/io"
 import { Username, Picture } from "../../interfaces/interfaces"
 import { HeaderContainer } from "./styled"
 // @ts-ignore
@@ -13,7 +11,6 @@ interface HeaderProps{
 
 
 const Header:FC<HeaderProps> = ({ displayModal })=>{
-    const navigate = useNavigate()
     let user = localStorage.getItem('user')
     let userImage = localStorage.getItem('userImage')
     const [photo, setPhoto] = useState<Picture>({

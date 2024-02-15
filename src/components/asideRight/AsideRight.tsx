@@ -1,15 +1,13 @@
 import { FC, useState, useEffect } from "react"
 import { Container } from "./styled"
-import { CartsProducts, Carts } from "../../interfaces/interfaces"
+import { Carts } from "../../interfaces/interfaces"
 
 
 
 const AsideRight:FC = ()=>{
     const [carts, setCarts] = useState<Carts[]>([])
-    const [products, setProducts] = useState<CartsProducts[]>([])
-    const [cartProducts, setCartProducts] = useState<CartsProducts[]>([])
 
-//console.log(carts)
+
 
     useEffect(()=>{
         fetch('https://dummyjson.com/carts').then(res => res.json()).then(data=>{

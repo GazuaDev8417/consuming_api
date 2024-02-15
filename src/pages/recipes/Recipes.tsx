@@ -17,7 +17,7 @@ const Recipes:FC = ()=>{
     
     useEffect(()=>{
         if(!logged){
-            navigate('/')
+            navigate('/consuming_api')
         }
     }, [])
 
