@@ -14,7 +14,7 @@ const Modal:FC = ()=>{
 
         if(decide){
             localStorage.removeItem('logged')
-            navigate('/')
+            navigate('/consuming_api')
         }
     }
 
@@ -23,9 +23,9 @@ const Modal:FC = ()=>{
     return(
         <Container>
             <div className="user">{username.first} {username.last}</div>
-            <div className="item" onClick={()=> navigate('/')}>Home</div>  
-            <div className="item" onClick={()=> navigate('/recipes')}>Receitas</div>  
-            <div className="item" onClick={()=> navigate('/user')}>Perfil</div>  
+            <div className="item" onClick={()=> navigate('/consuming_api/home')}>Home</div>  
+            <div className="item" onClick={()=> navigate('/consuming_api/recipes')}>Receitas</div>  
+            <div className="item" onClick={()=> navigate('/consuming_api/user')}>Perfil</div>  
             <div className="item" onClick={logout}>Logout</div>  
         </Container>
     )

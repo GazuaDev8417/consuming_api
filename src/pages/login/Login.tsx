@@ -27,7 +27,7 @@ const Login:FC = ()=>{
 
     useEffect(()=>{
         if(logged){
-            navigate('/home')
+            navigate('/consuming_api/home')
         }
     }, [])
 
@@ -76,14 +76,14 @@ const Login:FC = ()=>{
                 localStorage.setItem('login', JSON.stringify(data.results[0].login)) 
                 
                 localStorage.setItem('logged', 'logged')                
-                navigate('/home')
+                navigate('/consuming_api/home')
             }else if(loginStored){
                 if(
                     form.email === email &&
                     form.password === JSON.parse(loginStored).password
                 ){
                     localStorage.setItem('logged', 'logged')                
-                    navigate('/home')
+                    navigate('/consuming_api/home')
                 }else{
                     alert('Usuário não encontrado!')
                 }

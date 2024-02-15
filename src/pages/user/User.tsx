@@ -41,7 +41,7 @@ const User:FC = ()=>{
     
     useEffect(()=>{
         if(!logged){
-            navigate('/')
+            navigate('/consuming_api')
         }
     }, [])
 
@@ -74,7 +74,7 @@ const User:FC = ()=>{
 
         if(decide){
             localStorage.clear()
-            navigate('/')
+            navigate('/consuming_api')
         }
     }
 

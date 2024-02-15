@@ -19,7 +19,7 @@ const Home:FC = ()=>{
 
     useEffect(()=>{
         if(!logged){
-            navigate('/')
+            navigate('/consuming_api')
         }
     }, [])
 

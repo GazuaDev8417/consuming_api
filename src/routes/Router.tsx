@@ -10,10 +10,10 @@ import User from "../pages/user/User"
 const Router:FC = ()=>{
     return(
         <Routes>
-            <Route path="/" element={<Login/>} />
-            <Route path="/home" element={<Home/>} />
-            <Route path="/recipes" element={<Recipes/>} />
-            <Route path="/user" element={<User/>} />
+            <Route path="/consuming_api" element={<Login/>} />
+            <Route path="/consuming_api/home" element={<Home/>} />
+            <Route path="/consuming_api/recipes" element={<Recipes/>} />
+            <Route path="/consuming_api/user" element={<User/>} />
         </Routes>
     )
 }
